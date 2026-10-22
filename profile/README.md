@@ -49,6 +49,15 @@ Code: [new-3speak-tv](https://github.com/Mantequilla-Soft/new-3speak-tv) · [3sp
 
 Code: [snapie-io](https://github.com/Mantequilla-Soft/snapie-io) (web) · [hivesnaps](https://github.com/Mantequilla-Soft/hivesnaps) (React Native app)
 
+## How it fits together
+
+```mermaid
+flowchart LR
+    apps["<b>3Speak</b> and <b>Snapie</b>"] --> shared["<b>Shared services</b><br/>uploads, encoding, live rooms, sign-up"] --> base["<b>Hive</b> and <b>IPFS</b>"]
+```
+
+Both apps run on the same shared services, and so can yours:
+
 ## Use our building blocks in your app
 
 | Repo | What it gives you |
