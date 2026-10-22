@@ -49,45 +49,6 @@ Code: [new-3speak-tv](https://github.com/Mantequilla-Soft/new-3speak-tv) · [3sp
 
 Code: [snapie-io](https://github.com/Mantequilla-Soft/snapie-io) (web) · [hivesnaps](https://github.com/Mantequilla-Soft/hivesnaps) (React Native app)
 
-## How it fits together
-
-```mermaid
-flowchart TB
-    subgraph apps["Apps"]
-        direction LR
-        tv["3Speak"]
-        snapie["Snapie<br/>web + mobile"]
-    end
-
-    subgraph shared["Shared services, reusable by any Hive app"]
-        direction LR
-        butr["Butter Auth<br/>sign-up and login"]
-        embed["embedvideos<br/>uploads"]
-        enc["3speakencoder<br/>encoding"]
-        pods["hangouts + LiveKit<br/>OpenPods"]
-        audio["snapieaudio<br/>audio"]
-    end
-
-    subgraph base["Storage and network"]
-        direction LR
-        ipfs[("IPFS")]
-        hive[("Hive")]
-    end
-
-    tv --> butr
-    tv --> embed
-    snapie --> embed
-    tv --> pods
-    snapie --> pods
-    tv --> audio
-    snapie --> audio
-    embed --> enc --> ipfs
-    audio --> ipfs
-    butr --> hive
-    tv --> hive
-    snapie --> hive
-```
-
 ## Use our building blocks in your app
 
 | Repo | What it gives you |
